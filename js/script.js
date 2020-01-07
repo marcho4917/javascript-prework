@@ -42,38 +42,22 @@ if(computerMove =='kamień' && playerMove =='papier'){
 	printMessage('Ty wygrywasz!');
 }
 
-else if(computerMove =='kamień' && playerMove =='nożyce'){
-	printMessage('Ty wygrywasz!');
-}
-
-else if(computerMove =='kamień' && playerMove =='kamień'){
-	printMessage('REMIS!');
-}
-
-else if(computerMove =='papier' && playerMove == 'kamień'){
-	printMessage('Wygrywa komputer!');
-}
-
 else if(computerMove =='papier' && playerMove =='nożyce'){
 	printMessage('Ty wygrywasz!');
 }
 
-else if(computerMove =='papier' && playerMove =='papier'){
-	printMessage('REMIS!');
-}
-
-else if(computerMove =='nożyce' && playerMove =='papier'){
-	printMessage('Wygrywa komputer!');
-}
-
 else if(computerMove =='nożyce' && playerMove =='kamień'){
-	printMessage('Wygrywasz Ty!');
-}
-
-else if(computerMove =='nożyce' && playerMove =='nożyce'){
-	printMessage('REMIS!');
+	printMessage('Ty wygrywasz!');
 }
 
 else if(playerMove =='nieznany ruch'){
 	printMessage('podaj liczbe od 1 do 3');
+}
+
+else if(computerMove == playerMove){
+	printMessage('REMIS!');
+}
+
+else {
+	printMessage('Wygrywa komputer!')
 }
