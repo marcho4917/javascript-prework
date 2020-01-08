@@ -9,7 +9,7 @@ function playGame(playerInput){
 		  	return 'nożyce';
 		}
 		  else{
-		  	printMessage('Nie zanm ruchu o id' + argMoveId +'.');
+		  	printMessage('Nie znam ruchu o id' + argMoveId +'.');
 			return 'nieznany ruch';
 		  }
 	}
