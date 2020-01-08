@@ -77,4 +77,4 @@ else {
 }
 }
 
-printMessage('wynik:' + displayResult(argComputerMove,argPlayerMove));
+printMessage('wynik:' + displayResult(argComputerMove, argPlayerMove));
