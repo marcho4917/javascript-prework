@@ -1,7 +1,7 @@
 function playGame(playerInput){
 	clearMessages ();
 	function getMoveName (argMoveId){
-		if(argMoveId == 1){
+		if(argMoveId == '1'){
 			return 'kamień';
 		} else if(argMoveId =='2'){
 			return 'papier';
@@ -81,4 +81,16 @@ function playGame(playerInput){
 
 	printMessage('wynik:' + displayResult(argComputerMove, argPlayerMove));
 
+	document.getElementById('play-rock').addEventListener('click', function() {
+		playGame(1);
+	});
+
+	document.getElementById('play-paper').addEventListener('click', function() {
+		playGame(2);
+	});
+
+	document.getElementById('play-scissors').addEventListener('click', function() {
+		playGame(3);
+
+	});
 }
