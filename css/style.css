@@ -36,6 +36,15 @@ button {
   margin-right: 150px;
 }
 
+#result {
+	font-size:  20px;
+	margin-top: 25px;
+	font-family: fantasy;
+	text-align: center;
+	margin-left: 150px;
+  	margin-right: 150px;
+}
+
 i {
 	font-size: 60px;
 	color: white;
