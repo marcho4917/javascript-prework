@@ -81,6 +81,7 @@ function playGame(playerInput){
 
 	printMessage('wynik:' + displayResult(argComputerMove, argPlayerMove));
 
+}
 	document.getElementById('play-rock').addEventListener('click', function() {
 		playGame(1);
 	});
@@ -93,4 +94,3 @@ function playGame(playerInput){
 		playGame(3);
 
 	});
-}
