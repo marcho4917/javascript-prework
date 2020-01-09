@@ -19,6 +19,9 @@ function playGame(playerInput){
 
 	let argComputerMove = getMoveName(randomNumber);
 
+	let playerScore = 0;
+	let computerScore = 0;
+
 	/*if(randomNumber == 1){
 	  computerMove = 'kamień';
 	}
@@ -55,33 +58,41 @@ function playGame(playerInput){
 		console.log('moves:', argComputerMove, argPlayerMove);
 
 	if(argComputerMove =='kamień' && argPlayerMove =='papier'){
-		printMessage('Ty wygrywasz!');
+		playerScore ++;
+		return('Ty wygrywasz!');
 	}
 
 	else if(argComputerMove =='papier' && argPlayerMove =='nożyce'){
-		printMessage('Ty wygrywasz!');
+		playerScore ++;
+		return('Ty wygrywasz!');
 	}
 
 	else if(argComputerMove =='nożyce' && argPlayerMove =='kamień'){
-		printMessage('Ty wygrywasz!');
+		playerScore ++;
+		return('Ty wygrywasz!');
 	}
 
 	else if(argPlayerMove =='nieznany ruch'){
-		printMessage('podaj liczbe od 1 do 3');
+		return('podaj liczbe od 1 do 3');
 	}
 
 	else if(argComputerMove == argPlayerMove){
-		printMessage('REMIS!');
+		return('REMIS!');
 	}
 
 	else {
-		printMessage('Wygrywa komputer!')
+		computerScore ++;
+		return('Wygrywa komputer!');
 	}
 	}
 
 	printMessage('wynik:' + displayResult(argComputerMove, argPlayerMove));
+	getResult();
 
+	function getResult(){
+		document.getElementById('result').innerHTML = 'Gracz:' + playerScore + '<br>' + 'Komputer:' + computerScore;}
 }
+
 	document.getElementById('play-rock').addEventListener('click', function() {
 		playGame(1);
 	});
