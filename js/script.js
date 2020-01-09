@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0;
+
 function playGame(playerInput){
 	clearMessages ();
 	function getMoveName (argMoveId){
@@ -19,8 +22,7 @@ function playGame(playerInput){
 
 	let argComputerMove = getMoveName(randomNumber);
 
-	let playerScore = 0;
-	let computerScore = 0;
+	
 
 	/*if(randomNumber == 1){
 	  computerMove = 'kamień';
