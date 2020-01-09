@@ -86,6 +86,11 @@ function playGame(playerInput){
 		computerScore ++;
 		return('Wygrywa komputer!');
 	}
+	function whoWon(playerScore,computerScore){
+		if(playerScore == 20 || computerScore == 20){
+			return('Koniec gry!');
+		}
+	}
 	}
 
 	printMessage('wynik:' + displayResult(argComputerMove, argPlayerMove));
@@ -93,6 +98,10 @@ function playGame(playerInput){
 
 	function getResult(){
 		document.getElementById('result').innerHTML = 'Gracz:' + playerScore + '<br>' + 'Komputer:' + computerScore;}
+
+		function gameResult(){
+			document.getElementById('gameend').innerHTML = 'Wygrywa:' + ...?
+		}
 }
 
 	document.getElementById('play-rock').addEventListener('click', function() {
