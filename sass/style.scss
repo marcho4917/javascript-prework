@@ -1,0 +1,52 @@
+body {
+	background-color: 	#008B8B;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+button {
+  width: 180px;
+  height: 180px;
+  line-height: 180px;
+  background-color: black;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+
+.push {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  margin:0 auto;
+  justify-content: space-around;
+}
+
+#messages {
+  font-size: 20px;
+  margin-top: 25px;
+  font-family: fantasy;
+  text-align: center;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+#result {
+	font-size:  20px;
+	margin-top: 25px;
+	font-family: fantasy;
+	text-align: center;
+	margin-left: 150px;
+  	margin-right: 150px;
+}
+
+i {
+	font-size: 60px;
+	color: white;
+	margin-top: 55px;
+}

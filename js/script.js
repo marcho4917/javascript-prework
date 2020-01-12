@@ -1,21 +1,21 @@
 let playerScore = 0;
 let computerScore = 0;
 
-function playGame(playerInput){
+function playGame (playerInput) {
 	clearMessages ();
-	function getMoveName (argMoveId){
-		if(argMoveId == '1'){
+	function getMoveName (argMoveId) {
+		if (argMoveId == '1') {
 			return 'kamień';
-		} else if(argMoveId =='2'){
+		} else if(argMoveId =='2') {
 			return 'papier';
-		} else if(argMoveId =='3'){
+		} else if(argMoveId =='3') {
 		  	return 'nożyce';
-		}
-		  else{
+		} else {
 		  	printMessage('Nie znam ruchu o id' + argMoveId +'.');
 			return 'nieznany ruch';
-		  }
+		}
 	}
+
 	let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 	console.log('Wylosowana liczba to: ' + randomNumber);
@@ -28,29 +28,29 @@ function playGame(playerInput){
 
 	let argPlayerMove = getMoveName(playerInput);
 
-	function displayResult(argComputerMove, argPlayerMove){
+	function displayResult(argComputerMove, argPlayerMove) {
 		console.log('moves:', argComputerMove, argPlayerMove);
 
-	if(argComputerMove =='kamień' && argPlayerMove =='papier'){
+	if(argComputerMove =='kamień' && argPlayerMove =='papier') {
 		playerScore ++;
 		return('Ty wygrywasz!');
 	}
 
-	else if(argComputerMove =='papier' && argPlayerMove =='nożyce'){
+	else if(argComputerMove =='papier' && argPlayerMove =='nożyce') {
 		playerScore ++;
 		return('Ty wygrywasz!');
 	}
 
-	else if(argComputerMove =='nożyce' && argPlayerMove =='kamień'){
+	else if(argComputerMove =='nożyce' && argPlayerMove =='kamień') {
 		playerScore ++;
 		return('Ty wygrywasz!');
 	}
 
-	else if(argPlayerMove =='nieznany ruch'){
+	else if(argPlayerMove =='nieznany ruch') {
 		return('podaj liczbe od 1 do 3');
 	}
 
-	else if(argComputerMove == argPlayerMove){
+	else if(argComputerMove == argPlayerMove) {
 		return('REMIS!');
 	}
 
@@ -65,20 +65,27 @@ function playGame(playerInput){
 	getResult();
 
 	function getResult(){
-		document.getElementById('result').innerHTML = 'Gracz:' + playerScore + '<br>' + 'Komputer:' + computerScore;}
+		document.getElementById('result').innerHTML = 'Gracz:' + playerScore + '<br>' + 'Komputer:' + computerScore;
+
+		/*else if (playerScore == 3 || computerScore == 3){
+			alert ('koniec gry');
+			let playerScore = 0;
+			let computerScore = 0;
+		}*/
+
+	}
 
 
 }
-
-	document.getElementById('play-rock').addEventListener('click', function() {
-		playGame(1);
+document.getElementById('play-rock').addEventListener('click', function() {
+	playGame(1);
 	});
 
-	document.getElementById('play-paper').addEventListener('click', function() {
-		playGame(2);
+document.getElementById('play-paper').addEventListener('click', function() {
+	playGame(2);
 	});
 
-	document.getElementById('play-scissors').addEventListener('click', function() {
-		playGame(3);
+document.getElementById('play-scissors').addEventListener('click', function() {
+	playGame(3);
 
 	});
