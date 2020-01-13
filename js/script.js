@@ -6,9 +6,9 @@ function playGame (playerInput) {
 	function getMoveName (argMoveId) {
 		if (argMoveId == '1') {
 			return 'kamień';
-		} else if(argMoveId =='2') {
+		} else if (argMoveId =='2') {
 			return 'papier';
-		} else if(argMoveId =='3') {
+		} else if (argMoveId =='3') {
 		  	return 'nożyce';
 		} else {
 		  	printMessage('Nie znam ruchu o id' + argMoveId +'.');
@@ -31,51 +31,31 @@ function playGame (playerInput) {
 	function displayResult(argComputerMove, argPlayerMove) {
 		console.log('moves:', argComputerMove, argPlayerMove);
 
-	if(argComputerMove =='kamień' && argPlayerMove =='papier') {
+		if (argComputerMove =='kamień' && argPlayerMove =='papier') {
 		playerScore ++;
 		return('Ty wygrywasz!');
-	}
-
-	else if(argComputerMove =='papier' && argPlayerMove =='nożyce') {
-		playerScore ++;
-		return('Ty wygrywasz!');
-	}
-
-	else if(argComputerMove =='nożyce' && argPlayerMove =='kamień') {
-		playerScore ++;
-		return('Ty wygrywasz!');
-	}
-
-	else if(argPlayerMove =='nieznany ruch') {
-		return('podaj liczbe od 1 do 3');
-	}
-
-	else if(argComputerMove == argPlayerMove) {
-		return('REMIS!');
-	}
-
-	else {
-		computerScore ++;
-		return('Wygrywa komputer!');
-	}
+		} else if (argComputerMove =='papier' && argPlayerMove =='nożyce') {
+			playerScore ++;
+			return('Ty wygrywasz!');
+		} else if (argComputerMove =='nożyce' && argPlayerMove =='kamień') {
+			playerScore ++;
+			return ('Ty wygrywasz!');
+		} else if (argPlayerMove =='nieznany ruch') {
+			return('podaj liczbe od 1 do 3');
+		} else if (argComputerMove == argPlayerMove) {
+			return('REMIS!');
+		} else {
+			computerScore ++;
+			return ('Wygrywa komputer!');
+		}
 
 }
-
 	printMessage('wynik:' + displayResult(argComputerMove, argPlayerMove));
 	getResult();
 
-	function getResult(){
+	function getResult() {
 		document.getElementById('result').innerHTML = 'Gracz:' + playerScore + '<br>' + 'Komputer:' + computerScore;
-
-		/*else if (playerScore == 3 || computerScore == 3){
-			alert ('koniec gry');
-			let playerScore = 0;
-			let computerScore = 0;
-		}*/
-
 	}
-
-
 }
 document.getElementById('play-rock').addEventListener('click', function() {
 	playGame(1);
@@ -87,5 +67,4 @@ document.getElementById('play-paper').addEventListener('click', function() {
 
 document.getElementById('play-scissors').addEventListener('click', function() {
 	playGame(3);
-
 	});
