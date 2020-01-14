@@ -1,6 +1,8 @@
+{
+
 let playerScore = 0;
 let computerScore = 0;
-{
+
 const playGame = function (playerInput) {
 	clearMessages ();
 	const getMoveName = function (argMoveId) {
